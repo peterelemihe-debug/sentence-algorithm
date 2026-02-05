@@ -1,0 +1,32 @@
+ALGORITHM: Sentence Analysis
+
+START
+
+// Initialize counters
+SET charCount = 0
+SET wordCount = 1
+SET vowelCount = 0
+
+// Read the first character
+READ ch
+
+WHILE ch ≠ '.'
+    charCount = charCount + 1
+
+    IF ch = ' '
+        wordCount = wordCount + 1
+    ENDIF
+
+    IF ch = 'a' OR ch = 'e' OR ch = 'i' OR ch = 'o' OR ch = 'u'
+       OR ch = 'A' OR ch = 'E' OR ch = 'I' OR ch = 'O' OR ch = 'U'
+        vowelCount = vowelCount + 1
+    ENDIF
+
+    READ ch
+ENDWHILE
+
+PRINT "Number of characters: ", charCount
+PRINT "Number of words: ", wordCount
+PRINT "Number of vowels: ", vowelCount
+
+END
